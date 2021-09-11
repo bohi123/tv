@@ -519,7 +519,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: YTlive m3u8
-        path: .
+        path: ..
     - name: Git push assets to "YTlive" branch
       run: |
         git init
