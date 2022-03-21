@@ -25,8 +25,9 @@ jobs:
         touch ./beyond.m3u8
         sudo cat >./beyond.m3u8 <<EOL
         #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=5400000
+        #EXT-X-VERSION:4
+        #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="chi",DEFAULT=YES,AUTOSELECT=YES,LANGUAGE="chi",URI="$(youtube-dl -f 251 -g https://m.youtube.com/watch?v=SylBOXAWuRs)"
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=7680000,CODECS="avc1.66.40",RESOLUTION=1920x1080,AUDIO="audio"
         $(youtube-dl -f 137 -g https://m.youtube.com/watch?v=SylBOXAWuRs)
         EOL
     - name: Get ttvnews.m3u8
